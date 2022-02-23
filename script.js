@@ -75,6 +75,3 @@ changeStatus('go to bank', 'Done');
 deleteTask('go to work');
 
 showList(list);
-
-
-
