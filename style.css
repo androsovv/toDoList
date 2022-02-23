@@ -1,0 +1,84 @@
+* {
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   background-color: #7edefc;
+}
+
+.list {
+   width: 476px;
+   min-height: 688px;
+   background: #FFFFFF;
+   margin: 0 auto;
+   padding: 13px 8px;
+}
+
+h2 {
+   text-align: center;
+   font-size: 18px;
+   font-weight: 400;
+   margin: 0 auto;
+   margin-top: 12px;
+}
+
+.new_task {
+   display: flex;
+   align-items: center;
+   margin-top: 12px;
+   justify-content: space-between;
+   border: 1px solid;
+   border-radius: 6px;
+   padding: 11px;
+}
+
+.new_task_input {
+   width: 403px;
+   font-size: 18px;
+   height: 21px;
+   border: none;
+   outline: none;
+}
+
+.new_task_btn {
+   outline: none;
+   border: none;
+   width: 20px;
+   height: 20px;
+}
+
+.task_list {
+   margin-top: 8px;
+   display: flex;
+   align-items: start;
+   justify-content: space-between;
+   border: 1px solid;
+   border-radius: 6px;
+   padding: 11px;
+   min-height: 45px;
+}
+
+.checkbox {
+   width: 21px;
+   height: 21px;
+   border-radius: 10px;
+   margin: 0 auto;
+}
+
+.task_text {
+   width: 370px;
+   min-height: 21px;
+   margin: 0 auto;
+   font-size: 18px;
+   line-height: 21px;
+   font-weight: 400;
+}
+
+.remove_btn {
+   width: 15px;
+   height: 15px;
+   border: none;
+   padding: 0;
+   background: url(/src/icons/remove-icon.svg) center center/cover no-repeat;
+}
