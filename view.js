@@ -1,22 +1,28 @@
-const newHighTaskText = document.querySelector('.new_task_input_high'),
-   btnHigh = document.querySelector('.new_task_btn_high'),
-   taskList = document.querySelector('.task_list_high'),
-   formHigh = document.querySelector('.form__high');
+const newHighInputText = document.querySelector('.new_task_input_high'),
+   addHighTaskBtn = document.querySelector('.new_task_btn_high'),
+   highPriority = document.querySelector('.form__high');
+
+const newLowInputText = document.querySelector('.new_task_input_low'),
+   addLowTaskBtn = document.querySelector('.new_task_btn_low'),
+   lowPriority = document.querySelector('.form__low');
 
 
-btnHigh.addEventListener('click', (e) => {
-   e.preventDefault();
-   if (newHighTaskText.value !== '') {
-      let addHighTask = document.createElement('div');
-      addHighTask.className = 'task_list task_list_high';
-      addHighTask.innerHTML = `<input type="checkbox" class="checkbox" name="" id="">
-   <p class="task_text">${newHighTaskText.value}</p>
-   <button class="remove_btn"></button>`;
-      formHigh.append(addHighTask);
-      newHighTaskText.value = '';
-   }
-});
 
-function addTask () {
-   
+export function addTask(addTaskBtn, inputText, priority) {
+   addTaskBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (inputText.value !== '') {
+         let addTask = document.createElement('div');
+         addTask.className = 'task_list';
+         addTask.innerHTML = `<input type="checkbox" class="checkbox" name="" id="">
+      <p class="task_text">${inputText.value}</p>
+      <button class="remove_btn"></button>`;
+         priority.append(addTask);
+         inputText.value = '';
+      }
+   });
 }
+
+addTask(addHighTaskBtn, newHighInputText, highPriority);
+
+addTask(addLowTaskBtn, newLowInputText,lowPriority);
