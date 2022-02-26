@@ -75,10 +75,20 @@ h2 {
    font-weight: 400;
 }
 
+.through {
+   text-decoration: line-through;
+}
+
 .remove_btn {
    width: 15px;
    height: 15px;
    border: none;
    padding: 0;
    background: url(/src/icons/remove-icon.svg) center center/cover no-repeat;
+}
+
+.remove_btn:hover {
+   width: 18px;
+   height: 18px;
+   transition-delay: 1ms;
 }
